@@ -73,6 +73,14 @@ quickupdate admin
 
 
 
+### 注意！
+
+不要忘记将写入敏感的文件`update.config.js`，加入`.gitignore`，否则你的敏感信息将会被上传到代码库中！！
+
+
+
+
+
 ## 高阶操作
 
 ### 限制更新名称
