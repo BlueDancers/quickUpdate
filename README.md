@@ -30,7 +30,7 @@ module.exports = (objName) => {
   return {
     host: '0.0.0.0', // 填写服务器地址
     username: 'root', // 服务器用户名
-    password: 'nihaokeai1216.', // 服务器密码
+    password: '123456', // 服务器密码
     buildCmd: 'npm run build', // 更新命令名称
     buildPath: '/admin', // 你的项目打包路径例如 /dist
     uploadDir: '/usr/share/nginx ', // 在服务器的文件存放路径，例如填写的
