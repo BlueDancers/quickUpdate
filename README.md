@@ -43,21 +43,20 @@ module.exports = (objName) => {
 
 3. **开始第一次命令更新**
 
-> 假设你的项目在服务器中的路径为 /usr/share/nginx/admin，则更新命令为
+> 假设你的项目在服务器中的路径为 /usr/share/nginx/admin，配置文件uploadDir填写为/usr/share/nginx，则更新命令为
 >
-> qup为quickupdate的简写
 
 ```bash
-quickupdate admin或者qup admin
+quickupdate admin 或者 qup admin // qup为quickupdate的简写
 ```
 
-之后会询问你
+之后将会出现询问
 
 ```
 您正在将代码更新到服务器,回车将会继续执行
 ```
 
-按回车即可，之后变回执行打包 发送到服务器的脚本，结束后您将会看到
+按回车即可，之后变回执行打包 发送到服务器的脚本，结束后将会看到
 
 ````
 总共 x.xx MB,完成源代码压缩
@@ -71,15 +70,15 @@ quickupdate admin或者qup admin
 
 
 
-如果看到这个就恭喜你更新成功了，这边完成了一行代码将本地代码打包到服务器
+如果看到这个就恭喜您更新成功了，完成了一行命令将本地代码打包到服务器
 
 
 
 ### 注意！
 
-- 不要忘记将写入敏感的文件`update.config.js`，加入`.gitignore`，否则你的敏感信息将会被上传到代码库中！！
+- 不要忘记将写入敏感信息的文件`update.config.js`加入`.gitignore`，否则你的敏感信息将会被上传到代码库中！！
 
-- 如果发现上传到服务端那边文件为zip并没有没解压，请千万服务器测试unzip命令是否存在（输入unzip然后回车），如果提示`unzip: command not found`，就执行`yum install -y unzip zip`，安装完毕即可。
+- 如果发现上传到服务端的zip文件没有没解压，请前往服务器中测试unzip命令是否存在（输入unzip然后回车），如果提示`unzip: command not found`，就执行命令进行安装`yum install -y unzip zip`。
 
 
 
@@ -98,9 +97,9 @@ let whiteList = ['dist']
  */
 module.exports = (objName) => {
 	if (!whiteList.includes(objName)) {
-    console.log('当前项目不存在您输入的更新命令,请检查更新名称')
-    process.exit(0)
-  }
+    	console.log('当前项目不存在您输入的更新命令,请检查更新名称')
+    	process.exit(0)
+  	}
 	return {
     // ....
   }
@@ -120,9 +119,9 @@ let whiteList = ['dist', 'dist-pre']
  */
 module.exports = (objName) => {
 	if (!whiteList.includes(objName)) {
-    console.log('当前项目不存在您输入的更新命令,请检查更新名称')
-    process.exit(0)
-  }
+    	console.log('当前项目不存在您输入的更新命令,请检查更新名称')
+    	process.exit(0)
+ 	}
 	return {
 		// ....
     backObject: 'dist'
