@@ -44,9 +44,11 @@ module.exports = (objName) => {
 3. **开始第一次命令更新**
 
 > 假设你的项目在服务器中的路径为 /usr/share/nginx/admin，则更新命令为
+>
+> qup为quickupdate的简写
 
 ```bash
-quickupdate admin
+quickupdate admin或者qup admin
 ```
 
 之后会询问你
@@ -75,9 +77,9 @@ quickupdate admin
 
 ### 注意！
 
-不要忘记将写入敏感的文件`update.config.js`，加入`.gitignore`，否则你的敏感信息将会被上传到代码库中！！
+- 不要忘记将写入敏感的文件`update.config.js`，加入`.gitignore`，否则你的敏感信息将会被上传到代码库中！！
 
-
+- 如果发现上传到服务端那边文件为zip并没有没解压，请千万服务器测试unzip命令是否存在（输入unzip然后回车），如果提示`unzip: command not found`，就执行`yum install -y unzip zip`，安装完毕即可。
 
 
 
