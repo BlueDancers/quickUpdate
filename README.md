@@ -89,21 +89,22 @@ quickupdate admin 或者 qup admin // qup为quickupdate的简写
 > 命令中最后附带的更新名称将会被传回你的配置函数，所以可以在函数中可以进行逻辑校验
 
 ````js
-let whiteList = ['dist']
+let whiteList = ["dist"];
 /**
  * 更新配置
- * @param {String} objName 当前更新名称 
+ * @param {String} objName 当前更新名称
  * @returns
  */
 module.exports = (objName) => {
-	if (!whiteList.includes(objName)) {
-    	console.log('当前项目不存在您输入的更新命令,请检查更新名称')
-    	process.exit(0)
-  	}
-	return {
-    // ....
+  if (!whiteList.includes(objName)) {
+    console.log("当前项目不存在您输入的更新命令,请检查更新名称");
+    process.exit(0);
   }
-}
+  return {
+    // ....
+  };
+};
+
 ````
 
 ### 多环境部署
@@ -111,22 +112,23 @@ module.exports = (objName) => {
 > 假设您的前端项目存在多个环境 你希望可以通过命令备份正式环境代码，其他环境忽略，这可以启用参数backObject
 
 ```js
-let whiteList = ['dist', 'dist-pre']
+let whiteList = ["dist", "dist-pre"];
 /**
  * 更新配置
- * @param {String} objName 当前更新名称 
+ * @param {String} objName 当前更新名称
  * @returns
  */
 module.exports = (objName) => {
-	if (!whiteList.includes(objName)) {
-    	console.log('当前项目不存在您输入的更新命令,请检查更新名称')
-    	process.exit(0)
- 	}
-	return {
-		// ....
-    backObject: 'dist'
+  if (!whiteList.includes(objName)) {
+    console.log("当前项目不存在您输入的更新命令,请检查更新名称");
+    process.exit(0);
   }
-}
+  return {
+    // ....
+    backObject: "dist",
+  };
+};
+
 ```
 
 
