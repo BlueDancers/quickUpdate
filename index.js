@@ -174,7 +174,7 @@ module.exports = (objName) => {
     // 解压程序
     ssh
       .execCommand(
-        `rm -rf ${config.objname} && unzip -o -d ${config.uploadDir}/${config.objname} ${config.objname}.zip  && rm -f ${config.objname}.zip`,
+        `rm -rf ${config.objname} && unzip -o -d ${config.uploadDir}/${config.objname} ${config.objname}.zip  && rm -f ${config.objname}.zip && chmod -R u=rwx,g=rwx,o=rx ${config.objname}`,
         {
           cwd: config.uploadDir,
         }
