@@ -1,5 +1,5 @@
 #! /usr/bin/env node
-let upload = require("../index");
+let upload = require("../index.cjs");
 
 let objName = process.argv[2]; // 更新名字
 if (!objName) {

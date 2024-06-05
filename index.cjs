@@ -5,7 +5,7 @@ const archiver = require('archiver')
 const inquirer = require('inquirer')
 const exec = require('child_process').exec
 const ssh = new NodeSSH()
-const uploadFun = require(`${process.cwd()}/update.config.js`)
+const uploadFun = require(`${process.cwd()}/update.config.cjs`)
 
 /**
  * 1. 验证上线代码是否正确

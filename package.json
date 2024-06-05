@@ -1,21 +1,20 @@
 {
   "name": "quickupdate",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "type": "commonjs",
+  "main": "index.cjs",
+  "author": "",
+  "license": "ISC",
+  "scripts": {},
   "bin": {
-    "quickupdate": "./bin/index.js",
-    "qup": "./bin/index.js"
+    "quickupdate": "./bin/index.cjs",
+    "qup": "./bin/index.cjs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vkcyan/quickUpdate.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/vkcyan/quickUpdate/issues"
   },

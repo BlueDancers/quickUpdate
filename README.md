@@ -14,7 +14,7 @@
 npm i quickupdate -g
 ```
 
-2. **在项目中创建配置文件`update.config.js`**
+2. **在项目中创建配置文件`update.config.cjs`**
 
 ```js
 /**
@@ -67,11 +67,11 @@ quickupdate admin 或者 qup admin // qup为quickupdate的简写
 
 ### 注意！
 
-- 不要忘记将写入敏感信息的文件`update.config.js`加入`.gitignore`，否则你的敏感信息将会被上传到代码库中！！
+- 不要忘记将写入敏感信息的文件`update.config.cjs`加入`.gitignore`，否则你的敏感信息将会被上传到代码库中！！
 
 - 如果发现上传到服务端的 zip 文件没有没解压，请前往服务器中测试 unzip 命令是否存在（输入 unzip 然后回车），如果提示`unzip: command not found`，就执行命令进行安装`yum install -y unzip zip`。
 
-## 高阶操作
+## 高阶配置
 
 ### 限制更新名称
 
