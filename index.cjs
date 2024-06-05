@@ -187,12 +187,13 @@ module.exports = (objName) => {
         })
       })
       .then(() => {
+        // 删除macOS打包产生的无关文件
         ssh
           .execCommand(`rm -rf ${config.objname}/static/.DS_Store`, {
             cwd: config.uploadDir,
           })
           .then(() => {
-            console.log('线上项目.DS_Store删除完成')
+            // console.log('线上项目.DS_Store删除完成')
             ssh.dispose()
             process.exit(0)
           })
